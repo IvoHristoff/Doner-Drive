@@ -5,6 +5,6 @@
 
 ## description
 
-mobile game in C++ using unreal engine 5
+mobile game in C# using Untiy
 
 
