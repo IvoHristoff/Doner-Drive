@@ -1962,6 +1962,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1687258585}
   - component: {fileID: 1687258584}
+  - component: {fileID: 1687258586}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2027,6 +2028,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 20.146, y: 195.09, z: 0.001}
+--- !u!114 &1687258586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687258581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa1bfe6c3fd631246b389fd0c604df9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSmoothness: 15
+  rotSmoothness: 5
+  moveOffset: {x: 0, y: 3, z: -7}
+  rotOffset: {x: 0, y: 3, z: 0}
+  carTarget: {fileID: 3933809969757864028}
 --- !u!1 &1688041040
 GameObject:
   m_ObjectHideFlags: 0
