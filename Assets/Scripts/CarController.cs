@@ -14,6 +14,8 @@ public class CarController : MonoBehaviour
     private float currentBreakForce;
     private bool isBreaking;
 
+    [SerializeField] private Rigidbody carRigidbody;
+
     [SerializeField] private float motorForce;
     [SerializeField] private float breakForce;
     [SerializeField] private float maxSteerAngle;
@@ -28,12 +30,21 @@ public class CarController : MonoBehaviour
     [SerializeField] private Transform rearLeftWheelTransform;
     [SerializeField] private Transform rearRightWheelTransform;
 
+    public float maxSpeed;
+
     private void FixedUpdate()
     {
         GetInput();
         HandleMotor();
         HandleSteering();
         UpdateWheels();
+
+        float currentSpeed = carRigidbody.velocity.magnitude;
+
+        if (currentSpeed > maxSpeed)
+        {
+            carRigidbody.velocity = carRigidbody.velocity.normalized * maxSpeed;
+        }
     }
 
 
